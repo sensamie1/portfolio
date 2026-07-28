@@ -1,282 +1,422 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Samuel Ezealor</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Samuel Ezealor — Backend Engineer</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
+
 <body>
-    <header class="bg-secondary text-white py-1">
-        <div class="container d-flex justify-content-between">
-            <h1 class="h1 m-0">Samuel Ezealor</h1>
-            <nav class="navbar navbar-expand-lg navbar-dark">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="#about" style="font-weight: bolder;">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#skills" style="font-weight: bolder;">Skills</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#projects" style="font-weight: bolder;">Projects</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact" style="font-weight: bolder;">Contact</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-    </header>
-    
-    <section id="about" class="container my-5">
-        <div class="row align-items-center">
-            <div class="col-md-4 text-center">
-                <div class="profile-pic mb-3">
-                    <img src="assets/samuel-pic.png" alt="Samuel Ezealor" class="img-fluid rounded-border">
-                </div>
-                <div class="contact-me">
-                    <a href="https://www.linkedin.com/in/samuel-ezealor" target="_blank">
-                        <img src="assets/LinkedIn_logo.png" alt="LinkedIn">
-                    </a>
-                    <a href="https://github.com/sensamie1" target="_blank">
-                        <img src="assets/github.png" alt="GitHub">
-                    </a>
-                    <a href="mailto:samuelezealor52@gmail.com>" target="_blank">
-                        <img src="assets/gmail.png" alt="Gmail">
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-8">
-                <h2>About Me</h2>
-                <p style="text-align: justify;">
-                    I'm Samuel Ezealor, a <b>full-stack developer</b> specialized in <b>backend engineering</b> leveraging <b>JavaScript/TypeScript, Node.js</b> and <b>React.</b> My passion lies in architecting robust, scalable backend systems that drive the core functionality of software products. With a solid technical background and a track record of leadership within engineering teams, I am adept at navigating the intricacies of backend development with precision.
-                </p>
 
-                <p style="text-align: justify;">
-                    My expertise encompasses Test Driven Development methodologies, leveraging tools like JEST and Mocha within Agile environments to ensure the reliability and performance of software solutions. Consistently operating in production environments, I excel in harnessing TypeScript alongside Node.js to deliver efficient, maintainable codebases. Let's collaborate to engineer backend solutions that propel your digital endeavors to new heights.
-                </p>
+    <!-- ═══ NAV ═══ -->
+    <nav id="navbar">
+        <div class="nav-inner">
+            <a href="#hero" class="nav-logo">SE<span>.</span></a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ═══ HERO ═══ -->
+    <section id="hero">
+        <div class="hero-bg">
+            <div class="hero-grid"></div>
+            <div class="hero-glow g1"></div>
+            <div class="hero-glow g2"></div>
+        </div>
+        <div class="hero-content">
+            <p class="hero-eyebrow"><span class="dot"></span> Available for work</p>
+            <h1 class="hero-name">Samuel<br /><span>Ezealor</span></h1>
+            <p class="hero-role">Backend Engineer <span class="divider">·</span> Fintech Systems <span
+                    class="divider">·</span> Serverless</p>
+            <p class="hero-sub">I build the infrastructure behind secure, scalable products — from escrow engines and
+                payment webhooks to serverless APIs deployed on AWS Lambda.</p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn-primary">View My Work</a>
+                <a href="#contact" class="btn-outline">Let's Talk</a>
+            </div>
+            <div class="hero-socials">
+                <a href="https://www.linkedin.com/in/samuel-ezealor" target="_blank" aria-label="LinkedIn"><i
+                        class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/sensamie1" target="_blank" aria-label="GitHub"><i
+                        class="fab fa-github"></i></a>
+                <a href="mailto:samuelezealor52@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
             </div>
         </div>
-    </section>
-
-    <section id="skills" class="container my-5">
-        <h2>Skills</h2>
-        <div class="skills-grid">
-            <div class="skill text-center mb-4">
-                <img src="assets/JavaScript-logo.png" alt="JavaScript" class="img-fluid rounded-border mb-2">
-                <p style="font-weight: bolder;">JavaScript</p>
+        <div class="hero-visual">
+            <div class="photo-wrap">
+                <img src="assets/samuel-pic.png" alt="Samuel Ezealor" />
+                <div class="photo-ring"></div>
+                <div class="photo-ring r2"></div>
             </div>
-            <div class="skill text-center mb-4">
-                <img src="assets/typescript-logo.png" alt="TypeScript" class="img-fluid rounded-border mb-2">
-                <p style="font-weight: bolder;">TypeScript</p>
+            <div class="stat-card sc1"><span class="sc-num">8+</span><span class="sc-label">Projects Shipped</span>
             </div>
-            <div class="skill text-center mb-4">
-                <img src="assets/nodejs-logo.png" alt="Node.js" class="img-fluid rounded-border mb-2">
-                <p style="font-weight: bolder;">Node.js</p>
-            </div>
-            <div class="skill text-center mb-4">
-                <img src="assets/express-logo.png" alt="Express.js" class="img-fluid rounded-border mb-2">
-                <p style="font-weight: bolder;">Express.js</p>
-            </div>
-            <div class="skill text-center mb-4">
-                <img src="assets/rest-api-logo.png" alt="REST APIs" class="img-fluid rounded-border mb-2">
-                <p style="font-weight: bolder;">REST APIs</p>
-            </div>
-            <div class="skill text-center mb-4">
-                <img src="assets/react.svg" alt="React" class="img-fluid rounded-border mb-2">
-                <p style="font-weight: bolder;">React</p>
-            </div>
-            <div class="skill text-center mb-4">
-                <img src="assets/nestjs_logo.png" alt="Nest,js" class="img-fluid rounded-border mb-2">
-                <p style="font-weight: bolder;">Nest.js</p>
-            </div>
-            <div class="skill text-center mb-4">
-                <img src="assets/mongodb-logo.png" alt="MongoDB" class="img-fluid rounded-border mb-2">
-                <p style="font-weight: bolder;">MongoDB</p>
-            </div>
-            <div class="skill text-center mb-4">
-                <img src="assets/mysql-logo.png" alt="SQL" class="img-fluid rounded-border mb-2">
-                <p style="font-weight: bolder;">MySQL</p>
-            </div>
-            <div class="skill text-center mb-4">
-                <img src="assets/postgresql-logo.png" alt="postgreSQL" class="img-fluid rounded-border mb-2">
-                <p style="font-weight: bolder;">PostgreSQL</p>
-            </div>
-            <div class="skill text-center mb-4">
-                <img src="assets/graphql-logo.png" alt="graphQL" class="img-fluid rounded-border mb-2">
-                <p style="font-weight: bolder;">GraphQL</p>
-            </div>
-            <div class="skill text-center mb-4">
-                <img src="assets/redis-logo.png" alt="redis" class="img-fluid rounded-border mb-2">
-                <p style="font-weight: bolder;">Redis</p>
-            </div>
-            <div class="skill text-center mb-4">
-                <img src="assets/html-logo.png" alt="HTML" class="img-fluid rounded-border mb-2">
-                <p style="font-weight: bolder;">HTML</p>
-            </div>
-            <div class="skill text-center mb-4">
-                <img src="assets/css-logo.png" alt="CSS" class="img-fluid rounded-border mb-2">
-                <p style="font-weight: bolder;">CSS</p>
-            </div>
-            <div class="skill text-center mb-4">
-                <img src="assets/ejs-logo.png" alt="EJS" class="img-fluid rounded-border mb-2">
-                <p style="font-weight: bolder;">EJS</p>
-            </div>
-            <div class="skill text-center mb-4">
-                <img src="assets/handlebars-icon.png" alt="Handlebars" class="img-fluid rounded-border mb-2">
-                <p style="font-weight: bolder;">Handlebars</p>
+            <div class="stat-card sc2"><span class="sc-num">AWS</span><span class="sc-label">Lambda Deployed</span>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="container my-5">
-        <h2>Projects</h2>
-        <div class="row">
-            <div class="col-md-6 mb-4">
-                <div class="project row align-items-center">
-                    <div class="col-12">
-                        <img src="assets/peerwize-home.png" alt="Project 1" class="img-fluid rounded">
+    <!-- ═══ ABOUT ═══ -->
+    <section id="about">
+        <div class="section-inner">
+            <div class="section-label">01 / About</div>
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2>Engineered for the <span class="grad-text">backend</span>.</h2>
+                    <p>I'm Samuel Ezealor — a backend engineer with hands-on experience building <strong>production
+                            fintech systems</strong>. I specialize in <strong>NestJS, TypeScript, Node.js</strong>, and
+                        <strong>Prisma ORM</strong>, architecting systems that handle complex domain logic: escrow
+                        lifecycles, payment gateway integrations (Squad, Flutterwave), third-party logistics APIs, and
+                        inventory accounting engines.
+                    </p>
+                    <p>My work is grounded in <strong>security-first engineering</strong> — HMAC verification,
+                        timing-safe authentication, TOTP 2FA, and encrypted access tokens. I'm equally comfortable
+                        designing multi-tier RBAC, profit-sharing ledgers, or wiring up idempotent webhook processors.
+                        On the infrastructure side, I deploy serverless on <strong>AWS Lambda</strong> with CI/CD via
+                        GitHub Actions.</p>
+                    <p>Clean modular architecture and type-safe database access with Prisma are non-negotiables in how I
+                        write and maintain code.</p>
+                    <div class="about-tags">
+                        <span>NestJS</span><span>TypeScript</span><span>Node.js</span>
+                        <span>Prisma ORM</span><span>AWS Lambda</span><span>Security-First</span>
                     </div>
-                    <div class="col-12">
+                </div>
+                <div class="about-aside">
+                    <div class="info-card"><i class="fas fa-map-marker-alt"></i>
+                        <div><strong>Location</strong>
+                            <p>Port Harcourt, Nigeria</p>
+                        </div>
+                    </div>
+                    <div class="info-card"><i class="fas fa-envelope"></i>
+                        <div><strong>Email</strong>
+                            <p><a href="mailto:samuelezealor52@gmail.com">samuelezealor52@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="info-card"><i class="fas fa-phone"></i>
+                        <div><strong>Phone</strong>
+                            <p>+234-813-422-7375</p>
+                        </div>
+                    </div>
+                    <div class="info-card"><i class="fab fa-github"></i>
+                        <div><strong>GitHub</strong>
+                            <p><a href="https://github.com/sensamie1" target="_blank">sensamie1</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ SKILLS ═══ -->
+    <section id="skills">
+        <div class="section-inner">
+            <div class="section-label">02 / Skills</div>
+            <h2>Tech <span class="grad-text">Stack</span></h2>
+            <p class="section-sub">The tools and technologies I work with daily.</p>
+            <div class="skills-grid">
+                <div class="skill-card"><img src="assets/JavaScript-logo.png" alt="JavaScript" /><span>JavaScript</span>
+                </div>
+                <div class="skill-card"><img src="assets/typescript-logo.png" alt="TypeScript" /><span>TypeScript</span>
+                </div>
+                <div class="skill-card"><img src="assets/nodejs-logo.png" alt="Node.js" /><span>Node.js</span></div>
+                <div class="skill-card"><img src="assets/nestjs_logo.png" alt="NestJS" /><span>NestJS</span></div>
+                <div class="skill-card"><img src="assets/express-logo.png" alt="Express.js" /><span>Express.js</span>
+                </div>
+                <div class="skill-card"><img src="assets/react.svg" alt="React" /><span>React</span></div>
+                <div class="skill-card"><img src="assets/mongodb-logo.png" alt="MongoDB" /><span>MongoDB</span></div>
+                <div class="skill-card"><img src="assets/mysql-logo.png" alt="MySQL" /><span>MySQL</span></div>
+                <div class="skill-card"><img src="assets/postgresql-logo.png" alt="PostgreSQL" /><span>PostgreSQL</span>
+                </div>
+                <div class="skill-card"><img src="assets/redis-logo.png" alt="Redis" /><span>Redis</span></div>
+                <div class="skill-card"><img src="assets/graphql-logo.png" alt="GraphQL" /><span>GraphQL</span></div>
+                <div class="skill-card"><img src="assets/rest-api-logo.png" alt="REST APIs" /><span>REST APIs</span>
+                </div>
+                <div class="skill-card"><img src="assets/html-logo.png" alt="HTML" /><span>HTML</span></div>
+                <div class="skill-card"><img src="assets/css-logo.png" alt="CSS" /><span>CSS</span></div>
+                <div class="skill-card"><img src="assets/ejs-logo.png" alt="EJS" /><span>EJS</span></div>
+                <div class="skill-card"><img src="assets/handlebars-icon.png" alt="Handlebars" /><span>Handlebars</span>
+                </div>
+            </div>
+            <div class="tags-section">
+                <h3 class="tags-title">Additional Expertise</h3>
+                <div class="tags-wrap">
+                    <span class="tag">Prisma ORM</span><span class="tag">AWS Lambda</span><span class="tag">AWS
+                        S3</span>
+                    <span class="tag">Serverless Framework</span><span class="tag">Docker</span><span
+                        class="tag">Argon2</span>
+                    <span class="tag">TOTP / 2FA</span><span class="tag">JWT Auth</span><span
+                        class="tag">Passport.js</span>
+                    <span class="tag">HMAC Verification</span><span class="tag">Webhook Integration</span>
+                    <span class="tag">Escrow Systems</span><span class="tag">Inventory Management</span>
+                    <span class="tag">RBAC</span><span class="tag">CI/CD · GitHub Actions</span>
+                    <span class="tag">Axios</span><span class="tag">ExcelJS</span>
+                    <span class="tag">Jest &amp; Mocha</span><span class="tag">Agile / Scrum</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ PROJECTS ═══ -->
+    <section id="projects">
+        <div class="section-inner">
+            <div class="section-label">03 / Projects</div>
+            <h2>What I've <span class="grad-text">built</span></h2>
+            <p class="section-sub">A selection of projects — from production fintech to community platforms.</p>
+
+            <!-- CYPHERX FEATURED -->
+            <div class="featured-project">
+                <div class="fp-visual">
+                    <div class="fp-brand">
+                        <div class="fp-logo-row">
+                            <img src="assets/cypherx-logo.png" alt="CypherX" class="fp-logo-img" />
+                        </div>
+                        <p class="fp-category">Fintech · Escrow · Payments · Serverless</p>
+                        <div class="fp-badges">
+                            <span>NestJS</span><span>TypeScript</span><span>Prisma</span><span>MySQL</span>
+                            <span>AWS Lambda</span><span>AWS S3</span><span>Docker</span>
+                            <span>JWT</span><span>Argon2</span><span>TOTP 2FA</span>
+                            <span>Squad</span><span>Flutterwave</span><span>Speedaf</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="fp-content">
+                    <div class="fp-header">
+                        <h3>CypherX Backend Platform</h3>
+                        <span class="fp-pill">Featured · Private</span>
+                    </div>
+                    <p>Production-grade fintech backend powering a full escrow and payments platform. Built the complete
+                        escrow invoice lifecycle — create, accept, fund lock, dispute resolution, and partial/full
+                        release — with business-hours-aware delivery deadlines and encrypted buyer access tokens.</p>
+                    <p>Integrated <strong>Squad</strong> and <strong>Flutterwave</strong> payment webhooks with
+                        HMAC-SHA512/SHA256 verification and idempotent processing. Connected <strong>Speedaf logistics
+                            API</strong> with timing-safe webhook auth and automatic H2-tier pickup on fund lock. Also
+                        engineered a full inventory system (products, variants, SKUs, multi-location stock), profit
+                        &amp; commission engine with accounting ledger entries, admin panel with TOTP 2FA and RBAC, plus
+                        comprehensive audit logging. Deployed on AWS Lambda via the Serverless framework with GitHub
+                        Actions CI/CD.</p>
+                    <div class="fp-links">
+                        <a href="https://cypherxwallet.com/" target="_blank" class="fp-btn fp-btn-primary">
+                            <i class="fas fa-globe"></i> Visit Website
+                        </a>
+                    </div>
+                    <p class="fp-note"><i class="fas fa-lock"></i> Source code is private. The platform is live at
+                        cypherxwallet.com.</p>
+                </div>
+            </div>
+
+            <!-- PROJECT GRID -->
+            <div class="projects-grid">
+
+                <div class="project-card">
+                    <div class="pc-img"><img src="assets/peerwize-home.png" alt="Peerwize" /></div>
+                    <div class="pc-body">
                         <h3>Peerwize</h3>
-                        <p style="text-align: justify;">This community web app is designed as a platform for tech enthusiasts to connect, share knowledge, and collaborate on projects. It features user profiles, discussion forums, event announcements, and project collaboration tools. The goal is to foster a supportive community where members can exchange ideas, learn from one another, and stay updated on the latest in tech. The app is built using modern web technologies, with a focus on performance, scalability, and user experience. My role as a backend engineer involved managing the server-side logic, database interactions, and API development.</p>
-                        <a href="https://peerwize.vercel.app/" target="_blank" class="btn btn-secondary">Visit Web App</a>
-                        <a href="https://github.com/sensamie1/peerwize-backend" target="_blank" class="btn btn-secondary">View on GitHub</a>
+                        <p>Community platform for tech enthusiasts to connect, share knowledge, and collaborate.
+                            Features user profiles, discussion forums, event announcements, and project tools. I owned
+                            the backend — server-side logic, database interactions, and API development.</p>
+                        <div class="pc-links">
+                            <a href="https://peerwize.vercel.app/" target="_blank"><i
+                                    class="fas fa-external-link-alt"></i> Live</a>
+                            <a href="https://github.com/sensamie1/peerwize-backend" target="_blank"><i
+                                    class="fab fa-github"></i> GitHub</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-6 mb-4">
-                <div class="project row align-items-center">
-                    <div class="col-12">
-                        <img src="assets/hms-homepage.png" alt="Project 1" class="img-fluid rounded">
-                    </div>
-                    <div class="col-12">
+
+                <div class="project-card">
+                    <div class="pc-img"><img src="assets/hms-homepage.png" alt="Hemis" /></div>
+                    <div class="pc-body">
                         <h3>Hemis (HMS)</h3>
-                        <p style="text-align: justify;">The Hemis Staking Calculator is a tool designed to help users estimate their potential earnings from staking cryptocurrencies on the Hemis platform. By entering specific details such as the amount staked, staking duration, and expected annual percentage yield (APY), users can calculate their anticipated rewards. This tool aids in financial planning and investment strategy by providing clear projections of staking returns.</p>
-                        <a href="https://hemis.onrender.com/hemis/staking-calculator" target="_blank" class="btn btn-secondary">Visit Web App</a>
-                        <a href="https://github.com/sensamie1/HMS" target="_blank" class="btn btn-secondary">View on GitHub</a>
+                        <p>Staking calculator for the Hemis crypto platform. Users input staked amount, duration, and
+                            APY to get projected rewards — useful for investment planning around staking returns.</p>
+                        <div class="pc-links">
+                            <a href="https://hemis.onrender.com/hemis/staking-calculator" target="_blank"><i
+                                    class="fas fa-external-link-alt"></i> Live</a>
+                            <a href="https://github.com/sensamie1/HMS" target="_blank"><i class="fab fa-github"></i>
+                                GitHub</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-6 mb-4">
-                <div class="project row align-items-center">
-                    <div class="col-12">
-                        <img src="assets/eventful-homepage.png" alt="Project 2" class="img-fluid rounded">
-                    </div>
-                    <div class="col-12">
+
+                <div class="project-card">
+                    <div class="pc-img"><img src="assets/eventful-homepage.png" alt="Eventful" /></div>
+                    <div class="pc-body">
                         <h3>Eventful</h3>
-                        <p style="text-align: justify;">The Eventful app allows users to explore and manage events efficiently. It offers features such as event creation, viewing event details, and tracking upcoming events. Users can navigate through different views to see event summaries, detailed descriptions, and schedules. The interface is designed to be user-friendly, providing a streamlined experience for both event organizers and attendees.</p>
-                        <a href="https://eventful-app.onrender.com/views" target="_blank" class="btn btn-secondary">Visit Web App</a>
-                        <a href="https://github.com/sensamie1/eventful-app" target="_blank" class="btn btn-secondary">View on GitHub</a>
+                        <p>Event management app for creating, viewing, and tracking events. Streamlines the experience
+                            for organizers and attendees with clean scheduling and event detail views.</p>
+                        <div class="pc-links">
+                            <a href="https://eventful-app.onrender.com/views" target="_blank"><i
+                                    class="fas fa-external-link-alt"></i> Live</a>
+                            <a href="https://github.com/sensamie1/eventful-app" target="_blank"><i
+                                    class="fab fa-github"></i> GitHub</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-6 mb-4">
-                <div class="project row align-items-center">
-                    <div class="col-12">
-                        <img src="assets/rider-app-homepage.png" alt="Project 3" class="img-fluid rounded">
-                    </div>
-                    <div class="col-12">
+
+                <div class="project-card">
+                    <div class="pc-img"><img src="assets/rider-app-homepage.png" alt="Rider" /></div>
+                    <div class="pc-body">
                         <h3>Rider</h3>
-                        <p style="text-align: justify;">The Ride Ordering app provides a convenient platform for users to book rides. It includes features such as viewing available rides, managing bookings, and tracking ride status in real-time. The app's interface is designed to offer a seamless experience, allowing users to easily request a ride, knowing their vehicle type, and get estimated fare details. Whether for daily commutes or special trips, the app aims to simplify the process of ordering and managing transportation.</p>
-                        <a href="https://ride-ordering-app.onrender.com/views" target="_blank" class="btn btn-secondary">Visit Web App</a>
-                        <a href="https://github.com/sensamie1/ride-ordering-app" target="_blank" class="btn btn-secondary">View on GitHub</a>
+                        <p>Ride ordering platform where users book rides, view available vehicles, manage bookings, and
+                            track status in real-time. Includes vehicle type and estimated fare details.</p>
+                        <div class="pc-links">
+                            <a href="https://ride-ordering-app.onrender.com/views" target="_blank"><i
+                                    class="fas fa-external-link-alt"></i> Live</a>
+                            <a href="https://github.com/sensamie1/ride-ordering-app" target="_blank"><i
+                                    class="fab fa-github"></i> GitHub</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-6 mb-4">
-                <div class="project row align-items-center">
-                    <div class="col-12">
-                        <img src="assets/blog-app-homepage.png" alt="Project 5" class="img-fluid rounded">
-                    </div>
-                    <div class="col-12">
+
+                <div class="project-card">
+                    <div class="pc-img"><img src="assets/blog-app-homepage.png" alt="Blog App" /></div>
+                    <div class="pc-body">
                         <h3>Blog App</h3>
-                        <p style="text-align: justify;">Blog app offers a platform for users to read, create, and manage blog posts. It features a welcoming interface that helps users navigate through various blog entries, discover new content, and share their own stories and insights. The app aims to foster a community of writers and readers by providing tools for easy content creation and engagement.</p>
-                        <a href="https://sen-blog-app.onrender.com/views/welcome" target="_blank" class="btn btn-secondary">Visit Web App</a>
-                        <a href="https://github.com/sensamie1/blog-application" target="_blank" class="btn btn-secondary">View on GitHub</a>
+                        <p>Blogging platform for reading, writing, and managing posts. Provides content discovery tools
+                            and a clean interface for writers and readers to engage.</p>
+                        <div class="pc-links">
+                            <a href="https://sen-blog-app.onrender.com/views/welcome" target="_blank"><i
+                                    class="fas fa-external-link-alt"></i> Live</a>
+                            <a href="https://github.com/sensamie1/blog-application" target="_blank"><i
+                                    class="fab fa-github"></i> GitHub</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-6 mb-4">
-                <div class="project row align-items-center">
-                    <div class="col-12">
-                        <img src="assets/wisher-homepage.png" alt="Project 4" class="img-fluid rounded">
-                    </div>
-                    <div class="col-12">
+
+                <div class="project-card">
+                    <div class="pc-img"><img src="assets/wisher-homepage.png" alt="Wisher" /></div>
+                    <div class="pc-body">
                         <h3>Wisher</h3>
-                        <p style="text-align: justify;">The Wisher app allows users to create and manage anniversary dates for themselves and others. It automatically sends wishes to the specified recipients on the set dates. This feature helps users remember and celebrate important occasions, ensuring that no anniversary goes unnoticed. The app's user-friendly interface makes it easy to schedule these messages.</p>
-                        <a href="https://wisher-app.onrender.com/views" target="_blank" class="btn btn-secondary">Visit Web App</a>
-                        <a href="https://github.com/sensamie1/wisher-app" target="_blank" class="btn btn-secondary">View on GitHub</a>
+                        <p>Anniversary and special occasion scheduler. Automatically sends wishes to recipients on the
+                            set date — so no milestone ever goes unnoticed.</p>
+                        <div class="pc-links">
+                            <a href="https://wisher-app.onrender.com/views" target="_blank"><i
+                                    class="fas fa-external-link-alt"></i> Live</a>
+                            <a href="https://github.com/sensamie1/wisher-app" target="_blank"><i
+                                    class="fab fa-github"></i> GitHub</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-6 mb-4">
-                <div class="project row align-items-center">
-                    <div class="col-12">
-                        <img src="assets/todo-app-homepage.png" alt="Project 6" class="img-fluid rounded">
-                    </div>
-                    <div class="col-12">
+
+                <div class="project-card">
+                    <div class="pc-img"><img src="assets/todo-app-homepage.png" alt="Todo App" /></div>
+                    <div class="pc-body">
                         <h3>Todo App</h3>
-                        <p style="text-align: justify;">Todo app is designed to help users organize and manage their tasks efficiently. It offers features for creating, updating, and tracking to-do lists, ensuring that users can keep track of their responsibilities and deadlines. The app's interface is user-friendly, making it easy to add new tasks, set priorities, and mark completed items. Whether for personal use or professional projects, the Todo app aims to enhance productivity and organization.</p>
-                        <a href="https://sen-todo-app.onrender.com/views" target="_blank" class="btn btn-secondary">Visit Web App</a>
-                        <a href="https://github.com/sensamie1/todo-application" target="_blank" class="btn btn-secondary">View on GitHub</a>
+                        <p>Task management app for creating, updating, and tracking to-do lists. Supports priorities and
+                            completion tracking to help users stay organized and productive.</p>
+                        <div class="pc-links">
+                            <a href="https://sen-todo-app.onrender.com/views" target="_blank"><i
+                                    class="fas fa-external-link-alt"></i> Live</a>
+                            <a href="https://github.com/sensamie1/todo-application" target="_blank"><i
+                                    class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- /projects-grid -->
+        </div>
+    </section>
+
+    <!-- ═══ CONTACT ═══ -->
+    <section id="contact">
+        <div class="section-inner">
+            <div class="section-label">04 / Contact</div>
+            <h2>Let's <span class="grad-text">connect</span></h2>
+            <p class="section-sub">Have a project in mind or want to talk backend? I'm open to opportunities.</p>
+            <div class="contact-grid">
+                <div class="contact-form-wrap">
+                    <form id="contact-form" action="https://formspree.io/f/xyyraqeg" method="POST">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" placeholder="Your name" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="your@email.com" required />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="6" placeholder="Tell me about your project..."
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">
+                            Send Message <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <div class="ci-item">
+                        <div class="ci-icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <strong>Email</strong>
+                            <a href="mailto:samuelezealor52@gmail.com">samuelezealor52@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="ci-item">
+                        <div class="ci-icon"><i class="fas fa-phone"></i></div>
+                        <div>
+                            <strong>Phone</strong>
+                            <span>+234-813-422-7375</span>
+                        </div>
+                    </div>
+                    <div class="ci-item">
+                        <div class="ci-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <strong>Location</strong>
+                            <span>Port Harcourt, Nigeria</span>
+                        </div>
+                    </div>
+                    <div class="contact-socials">
+                        <a href="https://www.linkedin.com/in/samuel-ezealor" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/sensamie1" target="_blank" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:samuelezealor52@gmail.com" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="container my-5">
-        <h2>Contact</h2>
-        <div class="row">
-            <div class="col-md-6">
-                <form id="contact-form" action="https://formspree.io/f/xyyraqeg" method="POST">
-                    <div class="mb-3">
-                        <label for="name" class="form-label">Name</label>
-                        <input type="text" id="name" name="name" class="form-control" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" id="email" name="email" class="form-control" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="message" class="form-label">Message</label>
-                        <textarea id="message" name="message" class="form-control" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-secondary">Send Message</button>
-                </form>
+    <!-- ═══ FOOTER ═══ -->
+    <footer id="footer">
+        <div class="footer-inner">
+            <a href="#hero" class="footer-logo">SE<span>.</span></a>
+            <p class="footer-copy">&copy; 2026 Samuel Ezealor. Built with care.</p>
+            <div class="footer-socials">
+                <a href="https://www.linkedin.com/in/samuel-ezealor" target="_blank" aria-label="LinkedIn"><i
+                        class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/sensamie1" target="_blank" aria-label="GitHub"><i
+                        class="fab fa-github"></i></a>
+                <a href="mailto:samuelezealor52@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
             </div>
-            <div class="col-md-6">
-                <div class="contact-details">
-                    <h3>Contact Details</h3>
-                    <ul class="list-unstyled">
-                        <li><strong>Email:</strong> <a href="mailto:samuelezealor52@gmail.com">samuelezealor52@gmail.com</a></li>
-                        <li><strong>Phone:</strong> +234-813-422-7375</li>
-                        <li><strong>Address:</strong> Port Harcourt, Rivers State, Nigeria</li>
-                    </ul>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/samuel-ezealor" target="_blank">
-                            <img src="assets/LinkedIn_logo.png" alt="LinkedIn">
-                        </a>
-                        <a href="https://github.com/sensamie1" target="_blank">
-                            <img src="assets/github.png" alt="GitHub">
-                        </a>
-                        <a href="mailto:samuelezealor52@gmail.com" target="_blank">
-                            <img src="assets/gmail.png" alt="Gmail">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="bg-secondary text-white text-center py-3">
-        <div class="container">
-            <p>&copy; 2024 Sen Samie. All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <!-- Scroll to top -->
+    <button id="scrollTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
     <script src="scripts.js"></script>
 </body>
+
 </html>
